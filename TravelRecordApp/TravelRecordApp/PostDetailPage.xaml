@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TravelRecordApp.PostDetailPage">
+
+    <StackLayout x:Name="containerStackLayout"
+                Margin="16,20,16,0">
+        <Entry x:Name="experienceEntry"
+               Text="{Binding Experience}"/>
+        <Label x:Name="venueLabel"
+               Margin="0,30,0,0"
+               FontAttributes="Bold"
+               FontSize="22"
+               Text="{Binding VenueName}"/>
+        <Label x:Name="categoryLabel"
+               Text="{Binding CategoryName}"
+               TextColor="{StaticResource blueColor}"/>
+        <Label x:Name="addressLabel"
+               Text="{Binding Address}"
+               FontSize="15"/>
+        <Label x:Name="cordinatesLabel"
+               Text="{Binding LatLong}"
+               FontSize="15"/>
+        <Label x:Name="distanceLabel"
+               Text="{Binding Binding Distance, StringFormat='{0} meters'}"
+               FontSize="15"/>
+        <Button Text="Update"
+                Clicked="Update_Clicked"/>
+        <Button Text="Delete"
+                TextColor="Red"
+                Clicked="Delete_Clicked"/>
+    </StackLayout>
+</ContentPage>
