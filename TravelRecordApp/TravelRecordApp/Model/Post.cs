@@ -9,9 +9,9 @@ namespace TravelRecordApp.Model
     public class Post : INotifyPropertyChanged
     {
         
-        private string id;
+        private int id;
         [PrimaryKey, AutoIncrement]
-        public string Id
+        public int Id
         {
             get { return id; }
             set 
@@ -124,14 +124,5 @@ namespace TravelRecordApp.Model
             if(PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        //public static void Insert(Post post)
-        //{
-        //    using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
-        //    {
-        //        conn.CreateTable<Post>();
-        //        int rows = conn.Insert(post);
-        //    }
-        //}
     }
 }

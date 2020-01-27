@@ -30,7 +30,6 @@ namespace TravelRecordApp.Droid
             string dbName = "travel_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string fullPath = Path.Combine(folderPath, dbName);
-            //var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "exrin.db");
 
             LoadApplication(new App(fullPath));
         }

@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.HistoryPage">
     <ListView x:Name="postListView" 
-              ItemSelected="postListView_ItemSelected">
+              ItemSelected="postListView_ItemSelected"
+              IsPullToRefreshEnabled="True"
+              RefreshControlColor="Blue">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Experience}"/>

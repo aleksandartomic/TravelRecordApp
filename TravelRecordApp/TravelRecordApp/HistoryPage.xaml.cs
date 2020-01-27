@@ -20,13 +20,15 @@ namespace TravelRecordApp
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 conn.CreateTable<Post>();
                 var posts = conn.Table<Post>().ToList();
                 postListView.ItemsSource = posts;
+                postListView.RefreshCommand = new Command(() => { 
+                postListView.ItemsSource = posts;
+                postListView.IsRefreshing = false;
+                });
             }
         }
 

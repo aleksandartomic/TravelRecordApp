@@ -25,13 +25,14 @@ namespace TravelRecordApp
 
         protected override async void OnAppearing()
         {
-            base.OnAppearing();
-
+            listIndicator.IsVisible = true;
+            listIndicator.IsRunning = true;
             var locator = CrossGeolocator.Current;
             var position = await locator.GetPositionAsync();
-
             var venues = await Venue.GetVenues(position.Latitude, position.Longitude);
             venueListView.ItemsSource = venues;
+            listIndicator.IsVisible = false;
+            listIndicator.IsRunning = false;
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)

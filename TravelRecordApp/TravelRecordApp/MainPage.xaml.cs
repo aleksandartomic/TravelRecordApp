@@ -31,7 +31,7 @@ namespace TravelRecordApp
 
             if (isEmailEmpty || isPasswordEmpty)
             {
-
+                DisplayAlert("Error", "Fill in the fields", "Ok");
             }
             else
             {

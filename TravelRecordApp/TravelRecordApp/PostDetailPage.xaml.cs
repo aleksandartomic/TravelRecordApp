@@ -36,6 +36,7 @@ namespace TravelRecordApp
             using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))
             {
                 connection.CreateTable<Post>();
+                connection.Table<Post>();
                 int rows = connection.Update(selectedPost);
                 connection.Close();
 
@@ -45,7 +46,9 @@ namespace TravelRecordApp
                     Navigation.PushAsync(new HomePage());
                 }
                 else
+                {
                     DisplayAlert("Failure", "Experience failed to be updated", "Ok");
+                }
             }
         }
 

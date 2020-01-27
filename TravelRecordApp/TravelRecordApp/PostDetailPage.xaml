@@ -25,7 +25,7 @@
                Text="{Binding LatLong}"
                FontSize="15"/>
         <Label x:Name="distanceLabel"
-               Text="{Binding Binding Distance, StringFormat='{0} meters'}"
+               Text="{Binding Distance, StringFormat='{0} meters'}"
                FontSize="15"/>
         <Button Text="Update"
                 Clicked="Update_Clicked"/>

@@ -11,9 +11,9 @@ namespace TravelRecordApp.Model
 {
     public class User : INotifyPropertyChanged
     {
-        private string id;
+        private int id;
         [PrimaryKey, AutoIncrement]
-        public string Id
+        public int Id
         {
             get { return id; }
             set

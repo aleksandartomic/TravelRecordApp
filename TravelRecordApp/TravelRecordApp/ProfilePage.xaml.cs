@@ -20,10 +20,9 @@ namespace TravelRecordApp
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
+                conn.CreateTable<Post>();
                 var postTable = conn.Table<Post>();
 
                 var categories = (from p in postTable
