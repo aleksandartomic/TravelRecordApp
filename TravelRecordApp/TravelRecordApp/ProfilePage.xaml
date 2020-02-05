@@ -15,7 +15,8 @@
             <Label Text="posts"
                    HorizontalOptions="Center"
                    TextColor="LightBlue"/>
-            <ListView x:Name="categoriesListView">
+            <ListView x:Name="categoriesListView"
+                      SelectedItem="False">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Path=Key}"

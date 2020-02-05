@@ -14,14 +14,14 @@ namespace TravelRecordApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new HomePage());
         }
 
         public App(string databaseLocation)
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new HomePage());
 
             DatabaseLocation = databaseLocation;
         }

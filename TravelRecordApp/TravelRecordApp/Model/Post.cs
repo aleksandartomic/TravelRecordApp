@@ -117,6 +117,19 @@ namespace TravelRecordApp.Model
             }
         }
 
+        private DateTimeOffset createAt;
+
+        public DateTimeOffset CreateAt
+        {
+            get { return createAt; }
+            set 
+            { 
+                createAt = value;
+                OnProperyChanged("CreateAt");
+            }
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnProperyChanged(string propertyName)

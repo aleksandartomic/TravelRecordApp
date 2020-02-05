@@ -41,9 +41,9 @@ namespace TravelRecordApp
             {
                 var selectedVenue = venueListView.SelectedItem as Venue;
                 var firstCategory = selectedVenue.categories.FirstOrDefault();
-                //Post post = new Post()
-                //{
-                //    Experience = expretienceEntry.Text,
+
+                if (expretienceEntry.Text.Length == 0)
+               
                 post.CategoryId = firstCategory.id;
                 post.CategoryName = firstCategory.name;
                 post.Address = selectedVenue.location.address;
@@ -51,9 +51,7 @@ namespace TravelRecordApp
                 post.Latitude = selectedVenue.location.lat;
                 post.Longitude = selectedVenue.location.lng;
                 post.VenueName = selectedVenue.name;
-                //};
-
-                //Post.Insert(post);
+                post.CreateAt = DateTime.Now;
 
                 using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
                 {
@@ -66,7 +64,9 @@ namespace TravelRecordApp
                         Navigation.PushAsync(new HomePage());
                     }
                     else
+                    {
                         DisplayAlert("Failure", "Experience failed to be inserted", "Ok");
+                    }
                 }
             }
             catch (NullReferenceException nre)

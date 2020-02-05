@@ -9,9 +9,15 @@
         <ResourceDictionary>
             <Color x:Key="blueColor">#1E90FF</Color>
             <Color x:Key="whiteColor">#FFFFFF</Color>
+            <Color x:Key="redColor">#ff0000</Color>
 
             <Style x:Key="normalButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource blueColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource whiteColor}"/>
+            </Style>
+
+            <Style x:Key="redButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource redColor}"/>
                 <Setter Property="TextColor" Value="{StaticResource whiteColor}"/>
             </Style>
         </ResourceDictionary>

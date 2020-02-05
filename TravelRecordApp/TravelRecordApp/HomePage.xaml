@@ -5,8 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:local="clr-namespace:TravelRecordApp"
             mc:Ignorable="d"
-             x:Class="TravelRecordApp.HomePage">
-    <TabbedPage.ToolbarItems>
+             x:Class="TravelRecordApp.HomePage"
+            NavigationPage.HasBackButton="False">
+    <TabbedPage.ToolbarItems >
         <ToolbarItem Text="Add"
                      Icon ="ic_action_add.png"
                      Clicked="ToolbarItem_Clicked"/>

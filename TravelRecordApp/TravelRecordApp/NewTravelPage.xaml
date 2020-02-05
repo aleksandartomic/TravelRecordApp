@@ -21,7 +21,8 @@
 							   x:Name="listIndicator"/>
 			<ListView x:Name="venueListView"
 					  Margin="20, 0"
-					  HorizontalOptions="FillAndExpand">
+					  HorizontalOptions="FillAndExpand"
+					  SeparatorColor="Blue">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>

@@ -28,9 +28,10 @@
                Text="{Binding Distance, StringFormat='{0} meters'}"
                FontSize="15"/>
         <Button Text="Update"
-                Clicked="Update_Clicked"/>
+                Clicked="Update_Clicked"
+                Style="{StaticResource normalButton}"/>
         <Button Text="Delete"
-                TextColor="Red"
-                Clicked="Delete_Clicked"/>
+                Clicked="Delete_Clicked"
+                Style="{StaticResource redButton}"/>
     </StackLayout>
 </ContentPage>
